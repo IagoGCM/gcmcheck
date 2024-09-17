@@ -1,0 +1,171 @@
+/* styles.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* subtitulo */
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Created by GCM Iago*/
+h6 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo dos cabeçalhos das seções */
+h2 {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos rótulos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para inputs e selects */
+input, select, textarea {
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    margin-bottom: 1em; /* Margem inferior */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao redor */
+}
+
+/* Estilo dos botões */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilo para botões ao passar o mouse */
+
+/* Estilo para botões */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px 24px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Transições suaves */
+    outline: none; /* Remove borda de foco padrão */
+    position: relative; /* Necessário para o efeito de sombra interna */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80); /* Gradiente alterado ao passar o mouse */
+    transform: translateY(-3px); /* Levanta o botão */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra externa */
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Sombra suave ao redor para foco */
+}
+
+button:active {
+    transform: translateY(1px); /* Levemente afunda o botão */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao clicar */
+}
+
+/* Estilo para o contêiner de verificação */
+#verificacao {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+}
+
+/* Estilo dos inputs de rádio */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Espaçamento entre os itens */
+div > div {
+    margin-bottom: 20px;
+}
+
+/* Estilo da caixa de texto para observações */
+textarea {
+    resize: verticalal;
+}
+
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
+    display: flex; /* Usa flexbox no body */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
+.content {
+    flex: 1; /* Faz o conteúdo crescer para preencher o espaço disponível */
+}
+
+.header {
+    background-color: #003366; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+}
+
+.footer {
+    background-color: #f1f1f1; /* Cor de fundo (opcional) */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 20px; /* Adiciona um espaçamento acima do rodapé */
+    opacity: 0.5; /* Define a opacidade */
+}

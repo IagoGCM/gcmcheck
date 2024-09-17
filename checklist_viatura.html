@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Viatura</title>
+    
+    
+    
+</head>
+
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <header class="header">
+    <h1>Checklist de Viatura</h1>
+        <h5> Diretoria de Segurança Pública<br>
+         Guarda Civil Municipal - São Manuel - SP</h5>
+</header>
+    
+    
+    <form id="checklistForm">
+        <h2>CHECAGEM INICIAL</h2>
+        <label for="codigoVtr">Código VTR:</label>
+        <input type="text" id="codigoVtr" name="codigoVtr" placeholder="Ex: VTR 07, VTR 08, VTR 13..." ><br><br>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data"><br><br>
+      
+        <label for="periodo">Período</label>
+        <select id="periodo" name="periodo">
+            <option value="Diurno">Diurno</option>
+            <option value="Noturno">Noturno</option>
+        </select>
+    </div>
+        
+        
+        <label for="kmInicial">KM Inicial:</label>
+        <input type="number" id="kmInicial" name="kmInicial" placeholder="KM inicial.." ><br><br>
+
+        <label for="kmFinal">KM Final:</label>
+        <input type="number" id="kmFinal" name="kmFinal" placeholder="KM final.." ><br><br>
+
+        <!-- Segunda tabela - Pontos de Verificação -->
+        <h2>PONTOS DE VERIFICAÇÃO</h2>
+<div id="verificacao">
+    <!-- Itens 1 a 12 -->
+    <div>
+        <label for="lataria">01. Lataria:</label>
+        <select id="lataria" name="lataria">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="grafismo">02. Grafismo:</label>
+        <select id="grafismo" name="grafismo">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="farois">03. Faróis Dianteiros:</label>
+        <select id="farois" name="farois">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="seta">04. Luzes de Seta:</label>
+        <select id="seta" name="seta">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="lanternas">05. Lanternas Traseiras:</label>
+        <select id="lanternas" name="lanternas">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="freio">06. Luzes de Freio:</label>
+        <select id="freio" name="freio">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="re">07. Luz de Ré:</label>
+        <select id="re" name="re">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="giroflex">08. Giroflex:</label>
+        <select id="giroflex" name="giroflex">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="sirene">09. Sirene:</label>
+        <select id="sirene" name="sirene">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="radio">10. Rádio:</label>
+        <select id="radio" name="radio">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="tapecaria">11. Tapeçaria:</label>
+        <select id="tapecaria" name="tapecaria">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+    <div>
+        <label for="agua">12. Nível de Água:</label>
+        <select id="agua" name="agua">
+            <option value="Normal">Normal</option>
+            <option value="Com Avarias">Com Avarias</option>
+        </select>
+    </div>
+
+    <!-- Itens 13 a 19 -->
+    <div>
+        <label for="oleo">13. Nível de Óleo:</label>
+        <select id="oleo" name="oleo">
+            <option value="Normal">Normal</option>
+            <option value="Nível Baixo">Nível Baixo</option>
+        </select>
+    </div>
+    <div>
+        <label for="oleoFreio">14. Óleo de Freio:</label>
+        <select id="oleoFreio" name="oleoFreio">
+            <option value="Normal">Normal</option>
+            <option value="Nível Baixo">Nível Baixo</option>
+        </select>
+    </div>
+    <div>
+        <label for="pneus">15. Pneus:</label>
+        <select id="pneus" name="pneus">
+            <option value="Bons">Bons</option>
+            <option value="Ruins">Ruins</option>
+        </select>
+    </div>
+    <div>
+        <label for="estepe">16. Estepe:</label>
+        <select id="estepe" name="estepe">
+            <option value="Possui">Possui</option>
+            <option value="Não Possui">Não Possui</option>
+        </select>
+    </div>
+    <div>
+        <label for="triangulo">17. Triângulo:</label>
+        <select id="triangulo" name="triangulo">
+            <option value="Possui">Possui</option>
+            <option value="Não Possui">Não Possui</option>
+        </select>
+    </div>
+    <div>
+        <label for="macaco">18. Macaco:</label>
+        <select id="macaco" name="macaco">
+            <option value="Possui">Possui</option>
+            <option value="Não Possui">Não Possui</option>
+        </select>
+    </div>
+    <div>
+        <label for="chaveRoda">19. Chave de Roda:</label>
+        <select id="chaveRoda" name="chaveRoda">
+            <option value="Possui">Possui</option>
+            <option value="Não Possui">Não Possui</option>
+        </select>
+    </div>
+    <div>
+        <label for="combustivel">20. Combustível:</label>
+        <select id="combustivel" name="combustivel">
+            <option value="Acima de 1/2">Acima de 1/2</option>
+            <option value="Abaixo de 1/2">Abaixo de 1/2</option>
+        </select>
+    </div>
+</div>
+        </div>
+
+        <!-- Observações -->
+        <h2>OBSERVAÇÕES: </h2>
+<textarea id="observacoes" name="observacoes" rows="22" cols="80" placeholder="Em caso de anormalidades é obrigatório o preenchimento..."></textarea><br><br>
+
+
+
+        <!-- Checagem Realizada -->
+        <h2>CHECAGEM REALIZADA POR:</h2>
+        <label for="checagemRealizada">Checagem Realizada Por:</label>
+        <input type="text" id="checagemRealizada" name="checagemRealizada" placeholder="Digite seu nome ou matrícula..."><br><br>
+
+        <label for="subcomandante">Subcomandante do Turno:</label>
+        <input type="text" id="subcomandante" name="subcomandante" placeholder="Digite o nome do SubComandante..." ><br><br>
+
+        <!-- Botão para gerar o PDF -->
+        <button type="button" onclick="gerarPDF()">Gerar PDF</button>
+    </form>
+
+    <!-- Adicione seu script JavaScript abaixo para gerar o PDF -->
+    <script>
+    async function gerarPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Cabeçalho
+        doc.setFontSize(16);
+        doc.text('Checklist de Viatura', 105, 10, { align: 'center' });
+
+        // Tabela de Checagem Inicial
+        doc.autoTable({
+            startY: 20,
+            head: [['Código VTR', 'Data', 'Período', 'KM Inicial', 'KM Final']],
+            body: [[
+                document.getElementById('codigoVtr').value,
+                document.getElementById('data').value,
+                document.querySelector('select[name="periodo"]').value || '',
+                document.getElementById('kmInicial').value,
+                document.getElementById('kmFinal').value
+            ]],
+            theme: 'grid',
+            headStyles: { fillColor: [41, 128, 185] },
+            styles: { cellPadding: 2, fontSize: 12 }
+        });
+
+        // Tabela de Pontos de Verificação
+const verificacoes = [
+    ['01. Lataria', document.querySelector('select[name="lataria"]').value || ''],
+    ['02. Grafismo', document.querySelector('select[name="grafismo"]').value || ''],
+    ['03. Faróis Dianteiros', document.querySelector('select[name="farois"]').value || ''],
+    ['04. Luzes de Seta', document.querySelector('select[name="seta"]').value || ''],
+    ['05. Lanternas Traseiras', document.querySelector('select[name="lanternas"]').value || ''],
+    ['06. Luzes de Freio', document.querySelector('select[name="freio"]').value || ''],
+    ['07. Luz de Ré', document.querySelector('select[name="re"]').value || ''],
+    ['08. Giroflex', document.querySelector('select[name="giroflex"]').value || ''],
+    ['09. Sirene', document.querySelector('select[name="sirene"]').value || ''],
+    ['10. Rádio', document.querySelector('select[name="radio"]').value || ''],
+    ['11. Tapeçaria', document.querySelector('select[name="tapecaria"]').value || ''],
+    ['12. Nível de Água', document.querySelector('select[name="agua"]').value || ''],
+    ['13. Nível de Óleo', document.querySelector('select[name="oleo"]').value || ''],
+    ['14. Óleo de Freio', document.querySelector('select[name="oleoFreio"]').value || ''],
+    ['15. Pneus', document.querySelector('select[name="pneus"]').value || ''],
+    ['16. Estepe', document.querySelector('select[name="estepe"]').value || ''],
+    ['17. Triângulo', document.querySelector('select[name="triangulo"]').value || ''],
+    ['18. Macaco', document.querySelector('select[name="macaco"]').value || ''],
+    ['19. Chave de Roda', document.querySelector('select[name="chaveRoda"]').value || ''],
+    ['20. Combustível', document.querySelector('select[name="combustivel"]').value || '']
+];
+        doc.autoTable({
+            startY: doc.previousAutoTable.finalY + 10,
+            head: [['Ponto de Verificação', 'Status']],
+            body: verificacoes,
+            theme: 'grid',
+            headStyles: { fillColor: [41, 128, 185] },
+            styles: { cellPadding: 2, fontSize: 12 }
+        });
+
+        // Seção de Observações
+        const observacoes = document.getElementById('observacoes').value;
+        doc.autoTable({
+            startY: doc.previousAutoTable.finalY + 10,
+            head: [['Observações']],
+            body: [[observacoes]],
+            theme: 'grid',
+            styles: { cellPadding: 2, fontSize: 12 }
+        });
+
+        // Seção "Checagem Realizada Por"
+        const checagem = [
+            ['Checagem Realizada Por', document.getElementById('checagemRealizada').value],
+            ['Subcomandante do Turno', document.getElementById('subcomandante').value]
+        ];
+        doc.autoTable({
+            startY: doc.previousAutoTable.finalY + 10,
+            head: [['', '']],
+            body: checagem,
+            theme: 'grid',
+            styles: { cellPadding: 2, fontSize: 12 }
+        });
+
+        // Salvar o PDF
+        doc.save('Checklist_Viatura.pdf');
+    }
+</script>
+
+<div class="footer">
+    <h6>&copy; Created by Iago Rafael ®.</h6>
+</div>
+
+</body>
+
+</html>
